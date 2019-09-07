@@ -10,6 +10,7 @@ SHELL [ "/bin/bash", "-c" ]
 
 RUN apt-get -qq -y update && \
     apt-get -qq -y upgrade && \
+    apt-get -y install chromium && \
     apt-get -y autoclean && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt-get/lists/*
