@@ -15,7 +15,8 @@ RUN apt-get -qq -y update && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt-get/lists/*
 
-RUN yarn global add mermaid && \
+RUN yarn global add phantomjs-prebuilt && \
+    yarn global add mermaid && \
     yarn global add mermaid.cli
 
 # Enable tab completion by uncommenting it from /etc/bash.bashrc
