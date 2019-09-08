@@ -54,16 +54,10 @@ RUN apt-get -qq -y update && \
     rm -rf /var/lib/apt-get/lists/*
 
 # Pin at versions of Docker image build
-# N.B. phantomjs is deprecated
+# FIXME: phantomjs is deprecated
 RUN yarn global add phantomjs-prebuilt@2.1.16 && \
     yarn global add mermaid@8.2.6 && \
     yarn global add mermaid.cli@0.5.1
-
-# Enable tab completion by uncommenting it from /etc/bash.bashrc
-# The relevant lines are those below the phrase "enable bash completion in interactive shells"
-RUN export SED_RANGE="$(($(sed -n '\|enable bash completion in interactive shells|=' /etc/bash.bashrc)+1)),$(($(sed -n '\|enable bash completion in interactive shells|=' /etc/bash.bashrc)+7))" && \
-    sed -i -e "${SED_RANGE}"' s/^#//' /etc/bash.bashrc && \
-    unset SED_RANGE
 
 # Use C.UTF-8 locale to avoid issues with ASCII encoding
 ENV LC_ALL=C.UTF-8
