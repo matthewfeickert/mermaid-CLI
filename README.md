@@ -1,4 +1,4 @@
-# mermaid-CLI
+# mermaid-CLI headless Docker image
 
 Docker image with headless [mermaid JS](https://mermaidjs.github.io/#/) and [mermaid CLI](https://github.com/mermaidjs/mermaid.cli)
 
