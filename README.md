@@ -12,7 +12,7 @@ Docker image with headless [mermaid JS](https://mermaidjs.github.io/#/) and [mer
 All node dependencies installed with `yarn`
 
 - node [v10.16.3](https://nodejs.org/dist/v10.16.3/docs/api/)
-- [phantomjs-prebuilt](https://yarnpkg.com/en/package/phantomjs-prebuilt) [v2.1.16](https://www.npmjs.com/package/phantomjs-prebuilt/v/2.1.16) (**Deprecated**)
+- [phantomjs-prebuilt](https://yarnpkg.com/en/package/phantomjs-prebuilt) [v2.1.16](https://www.npmjs.com/package/phantomjs-prebuilt/v/2.1.16) ![](https://img.shields.io/badge/package-deprecated-red.svg)
 - [mermaid](https://yarnpkg.com/en/package/mermaid) [v8.2.6](https://www.npmjs.com/package/mermaid/v/8.2.6)
 - [mermaid.cli](https://yarnpkg.com/en/package/mermaid.cli) [v0.5.1](https://www.npmjs.com/package/mermaid.cli/v/0.5.1)
 
