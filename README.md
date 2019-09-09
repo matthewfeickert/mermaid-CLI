@@ -2,6 +2,11 @@
 
 Docker image with headless [mermaid JS](https://mermaidjs.github.io/#/) and [mermaid CLI](https://github.com/mermaidjs/mermaid.cli)
 
+[![Docker Automated build](https://img.shields.io/docker/automated/matthewfeickert/mermaid-cli.svg)](https://hub.docker.com/r/matthewfeickert/mermaid-cli/)
+[![Docker Build Status](https://img.shields.io/docker/build/matthewfeickert/mermaid-cli.svg)](https://hub.docker.com/r/matthewfeickert/mermaid-cli/builds/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/matthewfeickert/mermaid-cli.svg)](https://hub.docker.com/r/matthewfeickert/mermaid-cli/)
+[![download-size number-of-layers](https://images.microbadger.com/badges/image/matthewfeickert/mermaid-cli.svg)](https://microbadger.com/images/matthewfeickert/mermaid-cli)
+
 ## Node.js Installed Dependencies
 
 All node dependencies installed with `yarn`
