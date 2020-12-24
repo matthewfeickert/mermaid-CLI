@@ -10,4 +10,5 @@ image:
 	--build-arg BASE_IMAGE=node:15.5.0 \
 	-t matthewfeickert/mermaid-cli:latest \
 	-t matthewfeickert/mermaid-cli:node-15.5.0 \
+	-t matthewfeickert/mermaid-cli:mermaid-8.8.4 \
 	--compress .
