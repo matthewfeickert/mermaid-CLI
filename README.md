@@ -11,10 +11,11 @@ Docker image with headless [mermaid JS](https://mermaidjs.github.io/#/) and [mer
 
 All node dependencies installed with `yarn`
 
-- node [v10.16.3](https://nodejs.org/dist/v10.16.3/docs/api/)
-- [phantomjs-prebuilt](https://www.npmjs.com/package/phantomjs-prebuilt) [v2.1.16](https://www.npmjs.com/package/phantomjs-prebuilt/v/2.1.16) ![](https://img.shields.io/badge/package-deprecated-red.svg)
-- [mermaid](https://www.npmjs.com/package/mermaid) [v8.2.6](https://www.npmjs.com/package/mermaid/v/8.2.6)
-- [mermaid.cli](https://www.npmjs.com/package/mermaid.cli) [v0.5.1](https://www.npmjs.com/package/mermaid.cli/v/0.5.1)
+
+- node [v15.5.0](https://nodejs.org/dist/v15.5.0/docs/api/)
+- [puppeteer](https://www.npmjs.com/package/puppeteer) [v5.5.0](https://www.npmjs.com/package/puppeteer/v/5.5.0)
+- [mermaid](https://www.npmjs.com/package/mermaid) [v8.8.4](https://www.npmjs.com/package/mermaid/v/8.8.4)
+- [@mermaid-js/mermaid-cli](https://www.npmjs.com/package/@mermaid-js/mermaid-cli) [v8.8.4](https://www.npmjs.com/package/@mermaid-js/mermaid-cli/v/8.8.4)
 
 ## Install
 
@@ -33,3 +34,31 @@ docker run --rm -v $PWD:/home/node/data matthewfeickert/mermaid-cli:latest -i <i
 ```
 
 where `ext` is one of the supported extensions.
+
+To get a listing of all the options just run
+
+```
+docker run --rm matthewfeickert/mermaid-cli:latest
+```
+
+as the Docker image `CMD` is `--help`.
+
+```
+$ docker run --rm matthewfeickert/mermaid-cli:latest
+Usage: mmdc [options]
+
+Options:
+  -V, --version                                   output the version number
+  -t, --theme [theme]                             Theme of the chart, could be default, forest, dark or neutral. Optional. Default: default (default: "default")
+  -w, --width [width]                             Width of the page. Optional. Default: 800 (default: "800")
+  -H, --height [height]                           Height of the page. Optional. Default: 600 (default: "600")
+  -i, --input <input>                             Input mermaid file. Required.
+  -o, --output [output]                           Output file. It should be either svg, png or pdf. Optional. Default: input + ".svg"
+  -b, --backgroundColor [backgroundColor]         Background color. Example: transparent, red, '#F0F0F0'. Optional. Default: white
+  -c, --configFile [configFile]                   JSON configuration file for mermaid. Optional
+  -C, --cssFile [cssFile]                         CSS file for the page. Optional
+  -s, --scale [scale]                             Puppeteer scale factor, default 1. Optional
+  -f, --pdfFit                                    Scale PDF to fit chart
+  -p --puppeteerConfigFile [puppeteerConfigFile]  JSON configuration file for puppeteer. Optional
+  -h, --help                                      display help for command
+```

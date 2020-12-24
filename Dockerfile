@@ -1,7 +1,5 @@
-ARG BASE_IMAGE=node:10.16.3
+ARG BASE_IMAGE=node:15.5.0
 FROM ${BASE_IMAGE}
-
-MAINTAINER Matthew Feickert <matthewfeickert@users.noreply.github.com>
 
 USER root
 WORKDIR /root
@@ -10,7 +8,6 @@ SHELL [ "/bin/bash", "-c" ]
 
 # c.f. https://techoverflow.net/2018/06/05/how-to-fix-puppetteer-error-while-loading-shared-libraries-libx11-xcb-so-1-cannot-open-shared-object-file-no-such-file-or-directory/
 RUN apt-get -qq -y update && \
-    apt-get -qq -y upgrade && \
     apt-get -qq -y install \
         gconf-service \
         libasound2 \
@@ -51,13 +48,12 @@ RUN apt-get -qq -y update && \
         xdg-utils wget && \
     apt-get -y autoclean && \
     apt-get -y autoremove && \
-    rm -rf /var/lib/apt-get/lists/*
+    rm -rf /var/lib/apt/lists/*
 
 # Pin at versions of Docker image build
-# FIXME: phantomjs is deprecated
-RUN yarn global add phantomjs-prebuilt@2.1.16 && \
-    yarn global add mermaid@8.2.6 && \
-    yarn global add mermaid.cli@0.5.1
+RUN yarn global add puppeteer@5.5.0 && \
+    yarn global add mermaid@8.8.4 && \
+    yarn global add @mermaid-js/mermaid-cli@8.8.4
 
 # Use C.UTF-8 locale to avoid issues with ASCII encoding
 ENV LC_ALL=C.UTF-8
