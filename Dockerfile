@@ -53,7 +53,7 @@ RUN apt-get -qq -y update && \
 # Pin at versions of Docker image build
 RUN yarn global add puppeteer@5.5.0 && \
     yarn global add mermaid@8.8.4 && \
-    yarn global add mermaid.cli@0.5.1
+    yarn global add @mermaid-js/mermaid-cli@8.8.4
 
 # Use C.UTF-8 locale to avoid issues with ASCII encoding
 ENV LC_ALL=C.UTF-8
