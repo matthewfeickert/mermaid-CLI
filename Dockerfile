@@ -8,7 +8,6 @@ SHELL [ "/bin/bash", "-c" ]
 
 # c.f. https://techoverflow.net/2018/06/05/how-to-fix-puppetteer-error-while-loading-shared-libraries-libx11-xcb-so-1-cannot-open-shared-object-file-no-such-file-or-directory/
 RUN apt-get -qq -y update && \
-    apt-get -qq -y upgrade && \
     apt-get -qq -y install \
         gconf-service \
         libasound2 \
@@ -49,7 +48,7 @@ RUN apt-get -qq -y update && \
         xdg-utils wget && \
     apt-get -y autoclean && \
     apt-get -y autoremove && \
-    rm -rf /var/lib/apt-get/lists/*
+    rm -rf /var/lib/apt/lists/*
 
 # Pin at versions of Docker image build
 # FIXME: phantomjs is deprecated
