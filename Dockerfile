@@ -1,7 +1,5 @@
-ARG BASE_IMAGE=node:10.16.3
+ARG BASE_IMAGE=node:15.5.0
 FROM ${BASE_IMAGE}
-
-MAINTAINER Matthew Feickert <matthewfeickert@users.noreply.github.com>
 
 USER root
 WORKDIR /root
