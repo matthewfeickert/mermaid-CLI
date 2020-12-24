@@ -51,8 +51,7 @@ RUN apt-get -qq -y update && \
     rm -rf /var/lib/apt/lists/*
 
 # Pin at versions of Docker image build
-# FIXME: phantomjs is deprecated
-RUN yarn global add phantomjs-prebuilt@2.1.16 && \
+RUN yarn global add puppeteer@5.5.0 && \
     yarn global add mermaid@8.8.4 && \
     yarn global add mermaid.cli@0.5.1
 
