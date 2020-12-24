@@ -54,7 +54,7 @@ RUN apt-get -qq -y update && \
 # Pin at versions of Docker image build
 # FIXME: phantomjs is deprecated
 RUN yarn global add phantomjs-prebuilt@2.1.16 && \
-    yarn global add mermaid@8.2.6 && \
+    yarn global add mermaid@8.8.4 && \
     yarn global add mermaid.cli@0.5.1
 
 # Use C.UTF-8 locale to avoid issues with ASCII encoding
