@@ -1,3 +1,13 @@
+# DEPRECATED
+
+This Docker image is deprecated in favor of the mermaid project supported tool [`mermaid-js/mermaid-cli`](https://github.com/mermaid-js/mermaid-cli) and its Docker image.
+
+To get the `mermaid-js/mermaid-cli` Docker image run
+
+```
+docker pull minlag/mermaid-cli:latest
+```
+
 # mermaid-CLI headless Docker image
 
 Docker image with headless [mermaid JS](https://mermaidjs.github.io/#/) and [mermaid CLI](https://github.com/mermaidjs/mermaid.cli)
